@@ -54,7 +54,6 @@ body {
   width: 100%;
   margin: 0 auto;
   /* container это блок, но при этом у него есть внешний отступ, что противоречит БЭМ. Что делать? */
-  padding: 0 15px;
   padding: 0 15px 0 16px;
 }
 
@@ -275,7 +274,7 @@ p {
 }
 
 .header__logo {
-  margin-right: 821px;
+  margin-right: auto;
 }
 
 .header__container {
@@ -289,7 +288,7 @@ p {
 }
 
 .header__list {
-  width: 615px;
+  max-width: 615px;
   column-gap: 85px;
   row-gap: 20px;
   flex-wrap: wrap;
@@ -329,11 +328,12 @@ p {
   background-image: url(../img/main-info-img.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 100px 80px;
 }
 
 .main-info__title {
-  width: 837px;
+  max-width: 837px;
   font-size: 70px;
   font-weight: 800;
   line-height: 85.33px;
@@ -343,7 +343,7 @@ p {
 }
 
 .main-info__description {
-  width: 790px;
+  max-width: 790px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.86px;
@@ -354,7 +354,7 @@ p {
 /* about */
 
 .about__description {
-  width: 1235px;
+  max-width: 1235px;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -363,11 +363,11 @@ p {
 
 .about-cards {
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 31px;
+  gap: 29px;
 }
 
 .about-card_left {
+  width: 100%;
   align-items: flex-end;
   flex-wrap: wrap;
   background-image: url(../img/about-left-img.png);
@@ -376,10 +376,11 @@ p {
 }
 
 .about-card__content {
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  width: 868px;
   padding: 50px;
+  padding-right: 52px;
   font-size: 16px;
   font-weight: 700;
   line-height: 32px;
@@ -388,25 +389,26 @@ p {
 }
 
 .about-card__description {
-  width: 433px;
+  max-width: 433px;
 }
 
 .about-item {
-  width: 870px;
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  padding: 63px 120px 63px 300px;
+  padding: 63px 116px 63px 300px;
   border: 1px solid var(--light-gray-color);
+  background-position-x: 59px;
 }
 
 .about-card_right {
+  width: 100%;
   flex-direction: column;
   gap: 32px;
 }
 
 .about-item__title {
-  width: 452px;
+  max-width: 452px;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
@@ -422,14 +424,12 @@ p {
 .about-item:nth-child(1) {
   background-image: url(../img/about-item-top-icon.svg);
   background-repeat: no-repeat;
-  background-position-x: 59px;
   background-position-y: center;
 }
 
 .about-item:nth-child(2) {
   background-image: url(../img/about-item-bottom-icon.svg);
   background-repeat: no-repeat;
-  background-position-x: 59px;
   background-position-y: center;
 }
 
@@ -447,7 +447,8 @@ p {
 }
 
 .stages__description {
-  width: 758px;
+  width: 45%;
+  max-width: 758px;
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -463,32 +464,33 @@ p {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 870px;
+  width: 50%;
+  max-width: 870px;
   height: 98%;
   background-image: url(../img/stages-img.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
+  background-position: center;
 }
 
 /* questions */
 .questions-cards {
   gap: 32.5px;
-  flex-wrap: wrap;
 }
 
 .questions-card {
-  width: 568px;
-  padding: 63px 59px 64px 59px;
+  max-width: 568px;
+  padding: 63px 59px 63px 59px;
   border: 1px solid var(--light-gray-color);
 }
 
 .questions-card__title {
-  width: 412px;
+  max-width: 412px;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .questions-card__description {
@@ -510,9 +512,9 @@ p {
 }
 
 .footer__logo {
-  width: 224px;
+  max-width: 224px;
   height: 72px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .footer__list {
@@ -534,14 +536,15 @@ p {
 }
 
 .footer__form-list {
-  width: 570px;
+  max-width: 570px;
   flex-direction: column;
   gap: 25px;
   margin-bottom: 32px;
 }
 
 .footer__input {
-  width: 570px;
+  width: 100%;
+  max-width: 570px;
   height: 60px;
   padding: 14px 24px;
   font-size: 16px;
@@ -568,7 +571,7 @@ p {
 }
 
 .footer__column {
-  width: 570px;
+  max-width: 570px;
   display: flex;
   flex-direction: column;
 }
@@ -580,11 +583,12 @@ p {
 }
 
 .footer__column_left {
-  width: 367px;
+  width: 100%;
+  max-width: 363px;
 }
 
 .footer__column_right {
-  width: 361px;
+  max-width: 361px;
   align-self: center;
 }
 
